@@ -11,9 +11,6 @@ const App = () => {
     queryKey: ['tracks'],
     queryFn: fetchTracks
   });
-
-
-
   const [trackIndex, setTrackIndex] = useState(0)
   const goToNextTrack = () => {
     setTrackIndex(trackIndex + 1);
@@ -23,7 +20,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Bienvenue sur le blind test {tracks===undefined ? '' : tracks.length} </h1>
+        <h1 className="App-title">Bienvenue sur le blind test {tracks===undefined ? '' : tracks.length} {tracks===undefined ? '' : tracks[0]?.track.name} </h1>
       </header>
       <div className="App-images">
         <p>Il va falloir modifier le code pour faire un vrai blind test</p>
@@ -32,7 +29,6 @@ const App = () => {
       <button onClick={goToNextTrack}>
        Next track
       </button>
-
       <div className="App-buttons"></div>
     </div>
   );
