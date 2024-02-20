@@ -26,7 +26,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Bienvenue sur le blind test {tracks===undefined ? '' : tracks.length} {tracks===undefined ? '' : tracks[0]?.track.name} {tracks===undefined ? '' : tracks[0]?.track.artists[0]?.name} </h1>
+        <h1 className="App-title">Bienvenue sur le blind test {tracks===undefined ? '' : tracks.length} {tracks===undefined ? '' : tracks[trackIndex]?.track.name} {tracks===undefined ? '' : tracks[trackIndex]?.track.artists[0]?.name} </h1>
       </header>
       <div className="App-images">
         <p>Il va falloir modifier le code pour faire un vrai blind test</p>
